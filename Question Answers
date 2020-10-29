@@ -1,0 +1,29 @@
+Que1: How to handle Stale Element Exception in selenium?
+Answer: a. Use try catch block to try finding the element several times in a loop
+        b. Using wait e.g. wait.until(ExpectedConditions.presenceofElementlocated...
+        c. Using POM
+            initElements() method when given in POM file loads all the elements but does not intialize them
+        d. Try refreshing the page once and then try to locate the element again
+
+Que2:Difference between Action and Actions in selenium?
+Answer: Actions is a class that extends objects like actions.Keydown. Action is an interface used for single interaction of user like perform().
+        Bunch of actions together using Actions class and then call biuld() to store the set of actions as an Action. Once we have Action, we can call perofrm() to execute all the steps/actions.
+
+Que3: What is RemoteWebDriver in selenium WebDriver and use of it?
+Answer: RemoteWebdriver is a class that implements WebDriver Interface to execute scripts through remote webdriver server on a remote machine.
+
+Que4: Explain all types of waits in selenium with examples?
+Answer: Explicit wait: This wait is used to halt the execution till particular condition is met or maximum time specified has elapsed.
+        WebDriverWait wait=new WebDriverWait(driver, 20);
+        abclink=wait.until(ExpectedConditions.presenceofElementlocated
+        This will wait till abclink webelement is located or 20 secs are over.
+        Implicit Wait: This is a default wait time for which you want to wait
+        driver.manage().timeouts().implicitlyWait(10, Timeunit.SECONDS);
+        This will wait for 10 secs always.
+        
+Ques5: Difference between findElement and findElements in selenium?
+Answer: FindElement returns the first match it find for the specified locations and return the element.
+        FindElements keeps searching and returns list of all the elements it found for the specified locator.
+        
+Ques6:  Use of annotations in automation?
+Answer: Annotations are repeatedly used words to describe a piece of code that is a part of the whole program. Its main purpose is to control the flow of methods in the program.
